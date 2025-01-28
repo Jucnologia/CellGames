@@ -59,50 +59,20 @@
             align-items: center;
         }
         .foreground img:first-child {
-            max-width: 20%;  
-            height: auto;     
-            margin-top: 10px;
+            max-width: 20%;
+            height: auto;
         }
-        .foreground img:nth-child(2) {
-            max-width: 70%;  
-            height: auto;     
-            margin-top: -30px;
+        .foreground img {
+            max-width: 60%;
+            height: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
-        .foreground img:nth-child(3) {
-            max-width: 800px; 
-            height: auto;     
-            margin-top: -15px;
+        .foreground img.rules {
+            max-width: 35%;
+            margin-top: -180px;
+            height: auto;
         }
-
-        .gif-container {
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            margin-top: 30px;
-            text-align: left;
-        }
-
-        .gif-container img {
-            max-width: 400px;
-            margin-right: 20px;
-            border: 5px solid rgb(126, 56, 137);
-        }
-
-        .gif-container .stay-tuned {
-            font-family: 'Impact', sans-serif;
-            font-size: 30pt;
-            color: black;
-            margin-bottom: 5px;
-        }
-
-        .gif-container p {
-            font-size: 16px;
-            color: black;
-            margin: 0;
-            max-width: 600px;
-            text-align: justify;
-        }
-
         h1, h2 {
             font-family: 'Impact', sans-serif;
             font-size: 50pt;
@@ -110,18 +80,13 @@
             margin-top: 10px;
             margin-bottom: 20px;
         }
-
-        .foreground p.about-text {
-            text-align: justify;
-            margin-bottom: 20px;
-            padding-left: 150px;
-            padding-right: 150px;
+        .custom-list {
+            font-family: 'Impact', sans-serif;
+            font-size: 28pt;
+            list-style-type: disc;
+            margin-top: -100px;
+            padding-left: 40px;
         }
-
-        .gif-container p {
-            text-align: justify;
-        }
-
         footer {
             background-color: #252525;
             color: white;
@@ -130,45 +95,32 @@
             position: relative;
             bottom: 0;
         }
-
         footer table {
             width: 100%;
             border-collapse: collapse;
             color: white;
         }
-
         footer th, footer td {
             padding: 10px;
             text-align: left;
         }
-
         footer th {
             border-bottom: 2px solid white;
         }
-
         footer td {
             border-bottom: 1px solid #3a3a3a;
         }
-
         footer td:not(:last-child) {
             border-right: 2px solid white;
         }
-
         footer td, footer th {
             font-size: 14px;
         }
-
-        .video-container {
+        .foreground img.sep2{
+            max-width: 50%;
             margin-top: 20px;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
+            align-items: center;
 
-        iframe {
-            width: 80%;
-            height: 450px;
-            border: none;
         }
     </style>
 </head>
@@ -198,9 +150,20 @@
         <div class="foreground">
             <img src="./images/CellGamesLogo.png" alt="Cell Games Logo">
             <img src="./images/seperator.png" alt="Separator Image">
-            <h1>
-                Rules
-            </h1>           
+            <img src="./images/rules.png" alt="Rules Image" class="rules">
+
+            <ul class="custom-list">
+                <li>Solobattles | 600 Seconds</li>
+                <li>Best of 3</li>
+                <li>Single elemination</li>
+                <li>HP Capsules up to 5 Lifebars (MUI Goku Level)</li>
+                <li>Any other Capsules are not allowed</li>
+                <li>Wired connection has to be used</li>
+                <li>Certain Characters are banned from the tournament</li>
+                <li>Only "Cell Games" Map allowed</li>
+            </ul>
+            <img src="./images/seperatormirr.png" alt="Rules Image" class="sep2">
+            <img src="./images/allowedcapsules.png" alt="Rules Image" class="capsuleimg">
         </div>
     </body>
 
