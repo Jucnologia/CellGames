@@ -12,13 +12,16 @@
     <link rel="stylesheet" href="./frameworks/add_ons/radiodesign.css">
     <script type="text/javascript" src="./frameworks/add_ons/JQuery/Jquery-3.1.1.js"></script>
     <script src="./frameworks/add_ons/JQuery/jquery.min.js"></script>
-    <title>Cell Games - Navbar</title>
+    <title>Cell Games - Homepage</title>
     <style>
         body {
             margin: 0;
             padding: 0;
             background: url('./images/background.jpg') no-repeat center center fixed;
             background-size: cover;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         .navbar-custom {
             background-color: rgb(27, 27, 27);
@@ -44,20 +47,128 @@
             margin: 0 auto;
             width: calc(100% - 200px);
             max-width: 1400px;
-            background-color: white;
+            background-color: rgb(228, 228, 228);
+            color: black;
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             border-radius: 8px;
-            min-height: 100vh;
+            flex-grow: 1;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
         }
-        .foreground img {
+        .foreground img:first-child {
+            max-width: 20%;  
+            height: auto;     
+            margin-top: 10px;
+        }
+        .foreground img:nth-child(2) {
+            max-width: 70%;  
+            height: auto;     
+            margin-top: -30px;
+        }
+        .foreground img:nth-child(3) {
+            max-width: 800px; 
+            height: auto;     
+            margin-top: -15px;
+        }
+
+        .gif-container {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .gif-container img {
             max-width: 400px;
-            height: auto;
+            margin-right: 20px;
+            border: 5px solid rgb(126, 56, 137);
+        }
+
+        .gif-container .stay-tuned {
+            font-family: 'Impact', sans-serif;
+            font-size: 30pt;
+            color: black;
+            margin-bottom: 5px;
+        }
+
+        .gif-container p {
+            font-size: 16px;
+            color: black;
+            margin: 0;
+            max-width: 600px;
+            text-align: justify;
+        }
+
+        h1, h2 {
+            font-family: 'Impact', sans-serif;
+            font-size: 50pt;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .foreground p.about-text {
+            text-align: justify;
+            margin-bottom: 20px;
+            padding-left: 150px;
+            padding-right: 150px;
+        }
+
+        .gif-container p {
+            text-align: justify;
+        }
+
+        footer {
+            background-color: #252525;
+            color: white;
+            padding: 40px 20px;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+        }
+
+        footer table {
+            width: 100%;
+            border-collapse: collapse;
+            color: white;
+        }
+
+        footer th, footer td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        footer th {
+            border-bottom: 2px solid white;
+        }
+
+        footer td {
+            border-bottom: 1px solid #3a3a3a;
+        }
+
+        footer td:not(:last-child) {
+            border-right: 2px solid white;
+        }
+
+        footer td, footer th {
+            font-size: 14px;
+        }
+
+        .video-container {
             margin-top: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        iframe {
+            width: 80%;
+            height: 450px;
+            border: none;
         }
     </style>
 </head>
@@ -73,23 +184,62 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto me-3">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Ruleset</a>
+                        <a class="nav-link" href="rules.html">Ruleset</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">start.gg</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Tourneys</a>
-                    </li>
-                </ul>
+                    </ul>
+                </div>
             </div>
+        </nav>
+        <div class="foreground">
+            <img src="./images/CellGamesLogo.png" alt="Cell Games Logo">
+            <img src="./images/seperator.png" alt="Separator Image">
+            <h1>
+                Rules
+            </h1>           
         </div>
-    </nav>
-    <div class="foreground">
-        <h1>
-            Welcome to the
-        </h1>
-        <img src="./images/CellGamesLogo.png" alt="Cell Games Logo">
-    </div>
-</body>
+    </body>
+
+    <footer>
+        <table>
+            <tr>
+                <th></th>
+                <th>Contact</th>
+                <th>Legal stuff</th>
+                <th>Social Media</th>
+            </tr>
+            <tr>
+                <td rowspan="5">
+                    <img src="./images/CellGamesLogo.png" alt="Cell Games Logo" style="max-width: 120px; height: auto;">
+                </td>
+                <td><a href="https://discord.gg/a36zAvAMWq" target="_blank" style="color: white;">Discord</a></td>
+                <td>This site may redirect you to other Websites</td>
+                <td><a href="https://discord.gg/a36zAvAMWq" target="_blank" style="color: white;">Discord</a></td>
+            </tr>
+            <tr>
+                <td><a href="https://x.com/DasJuwu?t=AqSGy76ttl8c0-rMM3wuCA&s=09" target="_blank" style="color: white;">X</a></td>
+                <td>The Websites may have a Server is other countrys</td>
+                <td><a href="https://x.com/DasJuwu?t=AqSGy76ttl8c0-rMM3wuCA&s=09" target="_blank" style="color: white;">X</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>This Website is only for tournament use</td>
+                <td><a href="https://youtube.com/@jucno?si=k-sXUFsljBD_l957" target="_blank" style="color: white;">YouTube</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>No revenue is being generated for the hosts</td>
+                <td><a href="https://www.twitch.tv/jucnoyt?sr=a" target="_blank" style="color: white;">Twitch</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Images used are either selfmade or source is commented in the code</td>
+                <td></td>
+            </tr>
+        </table>
+    </footer>
 </html>
