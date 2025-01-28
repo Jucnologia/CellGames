@@ -12,166 +12,251 @@
     <link rel="stylesheet" href="./frameworks/add_ons/radiodesign.css">
     <script type="text/javascript" src="./frameworks/add_ons/JQuery/Jquery-3.1.1.js"></script>
     <script src="./frameworks/add_ons/JQuery/jquery.min.js"></script>
-    <title>SecureSight Tech. - Shop</title>
+    <title>Cell Games - Homepage</title>
     <style>
-        .navbar-custom {
-            background-color: rgb(65, 166, 54);
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('./images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
+        .navbar-custom {
+            background-color: rgb(27, 27, 27);
+        }
+        .navbar-custom .navbar-brand, 
         .navbar-custom .nav-link {
             color: white;
         }
         .navbar-custom .nav-link:hover {
-            color: lightgray;
+            color: #ccc;
         }
-        .navbar-custom .navbar-brand img {
-            max-height: 100%;
-            max-width: 100%;
+        .navbar-brand img {
+            margin: 0;
+            padding: 0;
         }
-        .navbar-brand {
-            height: 50px;
+        .navbar-nav .nav-item:not(:last-child) {
+            border-right: 1px solid white;
         }
-        .carousel-container {
-            max-width: 720px;
-            max-height: 480px;
+        .navbar-nav .nav-item {
+            padding: 0 10px;
+        }
+        .foreground {
             margin: 0 auto;
-            padding: 15px;
-        }
-        .carousel img {
-            width: 100%;
-            height: auto;
-            max-height: 480px;
-        }
-        #Headline {
-            font-family: Impact;
-            text-align: center;
-            margin-top: 20px;
-        }
-        .fade-in-start {
-            transform: translateY(50px);
-            opacity: 0;
-        }
-        .show {
-            transform: translateY(0);
-            opacity: 1;
-            transition: transform 0.8s ease-out, opacity 0.8s ease-out;
-        }
-        .card1, .card2, .card3 {
-            font-family: Arial;
-            margin-top: 30px;
-            margin-bottom: 30px;
-            border: 2px solid #ccc;
-            border-radius: 5px;
-            padding: 15px;
-        }
-        .card-img-top {
-            height: 200px;
-            object-fit: cover;
-            width: 100%;
-        }
-        .table-section {
-            background-color: #252525;
-            color: rgb(167, 163, 163);
+            width: calc(100% - 200px);
+            max-width: 1400px;
+            background-color: rgb(228, 228, 228);
+            color: black;
             padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
         }
-        .table-section .row {
-            margin-bottom: 15px;
+        .foreground img:first-child {
+            max-width: 50%;  
+            height: auto;     
+            margin-top: 10px;
         }
-        .table-section .col-md-4 {
-            border-left: 1px solid rgb(173, 172, 172);
-            padding-left: 15px;
+        .foreground img:nth-child(2) {
+            max-width: 30%;  
+            height: auto;     
+            margin-top: -30px;
         }
-        .table-section .col-md-4:first-child {
-            border-left: none;
-        }
-        .table-section p {
-            border-bottom: 1px solid rgb(109, 108, 108);
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-        }
-        .table-section p:last-child {
-            border-bottom: none;
+        .foreground img:nth-child(3) {
+            max-width: 800px; 
+            height: auto;     
+            margin-top: -15px;
         }
 
+        .gif-container {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .gif-container img {
+            max-width: 400px;
+            margin-right: 20px;
+            border: 5px solid rgb(126, 56, 137);
+        }
+
+        .gif-container .stay-tuned {
+            font-family: 'Impact', sans-serif;
+            font-size: 30pt;
+            color: black;
+            margin-bottom: 5px;
+        }
+
+        .gif-container p {
+            font-size: 16px;
+            color: black;
+            margin: 0;
+            max-width: 600px;
+            text-align: justify;
+        }
+
+        h1, h2 {
+            font-family: 'Impact', sans-serif;
+            font-size: 50pt;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .foreground p.about-text {
+            text-align: justify;
+            margin-bottom: 20px;
+            padding-left: 150px;
+            padding-right: 150px;
+        }
+
+        .gif-container p {
+            text-align: justify;
+        }
+
+        footer {
+            background-color: #252525;
+            color: white;
+            padding: 40px 20px;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+        }
+
+        footer table {
+            width: 100%;
+            border-collapse: collapse;
+            color: white;
+        }
+
+        footer th, footer td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        footer th {
+            border-bottom: 2px solid white;
+        }
+
+        footer td {
+            border-bottom: 1px solid #3a3a3a;
+        }
+
+        footer td:not(:last-child) {
+            border-right: 2px solid white;
+        }
+
+        footer td, footer th {
+            font-size: 14px;
+        }
+
+        .video-container {
+            margin-top: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        iframe {
+            width: 80%;
+            height: 450px;
+            border: none;
+        }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
-                <img src="./images/SELogo.png" alt="Logo">
+                <img src="./images/CellGamesLogo.png" alt="Cell Games Logo" height="60">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Suche" aria-label="Suche" >
-                <button class="btn btn-outline-light" type="submit">Suchen</button>
-            </form>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto me-3">
                     <li class="nav-item">
-                        <a class="nav-link" href="Minispiele.html">Minispiele</a>
+                        <a class="nav-link" href="#">Ruleset</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Shop.html" target="_blank">Shop</a>
+                        <a class="nav-link" href="#">start.gg</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Informationen.html">Informationen</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Team.html">Team</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Kontakt.html">Kontakt</a>
-                    </li>
-                </ul>
+                        <a class="nav-link" href="#">Tourneys</a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="foreground">
+            <img src="./images/welcome.png" alt="Welcome to the">
+            <img src="./images/CellGamesLogo.png" alt="Cell Games Logo">
+            <img src="./images/seperator.png" alt="Separator Image">
+            <h2>Tailer</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/gL6Mx6bHnPc" title="YouTube video"></iframe>
+            </div>
+            <div>
+                <h1>
+                    About
+                </h1>
+                <p class="about-text">
+                    Step into the arena of *DRAGON BALL: Sparking! ZERO* and experience the thrill of intense 1v1 battles! This high-octane fighting game brings all your favorite Dragon Ball characters to life with stunning visuals and explosive combat. Engage in fast-paced, strategic one-on-one duels where every move counts. Master powerful combos, devastating special attacks, and unique character abilities to outsmart and overpower your opponent. Whether you’re a seasoned fighter or a newcomer, *Sparking! ZERO* offers the perfect platform for showcasing your skills in epic, head-to-head showdowns. Get ready—only the strongest will rise!
+                </p>
+            </div>
+            <div class="gif-container">
+                <img src="./images/cellintro.gif" alt="Cell Intro GIF">
+                <div>
+                    <p class="stay-tuned">Stay tuned</p>
+                    <p>Get ready for the ultimate showdown at the Cell Games! A <strong>perfect</strong> opportunity for Dragon Ball fans across Europe to prove their strength in an intense, 1 versus 1 tournament. Only the most skilled fighters will survive the fierce competition, as warriors from all over the EU battle it out for glory and supremacy in DRAGON BALL Sparking! ZERO. Will you claim the title, or will you fall before the power of the best? Gather your warriors, sharpen your skills, and prepare for the Cell Games—where only the strongest will reign supreme!</p>
+                </div>
             </div>
         </div>
-    </nav>
-    <div id="Headline">
-        <h1>Team</h1>
-    </div>
-    
-    <div>
-       
-    </div>    
+    </body>
 
-    <section class="table-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>Kontakt</h5>
-                    <p>Justin Kristen</p>
-                    <p>E-Mail: j.kristen@iwm.rwth-aachen.de</p>
-                    <p>Tel.: 0231 137218</p>
-                    <p>Fax.: 0231 137219</p>
-                </div>
-                <div class="col-md-4">
-                    <h5>Support</h5>
-                    <p>E-Mail: support@SESight.de</p>
-                    <p>Tel.: 0231 137218</p>
-                    <p>Fax.: 0231 137219</p>
-                </div>
-                <div class="col-md-4">
-                    <h5>Rechtliches</h5>
-                    <p>Dies ist nur eine Projektseite</p>
-                    <p>Diese Seite verkauft keine Produkte</p>
-                    <p>Diese Seite dient nur zu privaten Testzwecken</p>
-                    <p>Potenziell verweist diese Seite auf Domänen im Ausland</p>
-                    <p>Diese Seite bietet keine realen Produkte an</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const cards = document.querySelectorAll('.fade-in-start');
-            cards.forEach((card, index) => {
-                setTimeout(() => {
-                    card.classList.add('show');
-                }, index * 200);
-            });
-        });
-    </script>
-</body>
+    <footer>
+        <table>
+            <tr>
+                <th></th>
+                <th>Contact</th>
+                <th>Legal stuff</th>
+                <th>Social Media</th>
+            </tr>
+            <tr>
+                <td rowspan="5">
+                    <img src="./images/CellGamesLogo.png" alt="Cell Games Logo" style="max-width: 120px; height: auto;">
+                </td>
+                <td>Discord</td>
+                <td>This site may redirect you to other Websites</td>
+                <td>Discord</td>
+            </tr>
+            <tr>
+                <td>X</td>
+                <td>The Websites may have a Server is other countrys</td>
+                <td>X</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>This Website is only for tournament use</td>
+                <td>YouTube</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>No revenue is being generated for the hosts</td>
+                <td>Twitch</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Images used are either selfmade or source is commented in the code</td>
+                <td></td>
+            </tr>
+        </table>
+    </footer>
 </html>
