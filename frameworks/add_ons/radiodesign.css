@@ -1,0 +1,14 @@
+.radio_class tr td input{
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.radio_class tr td label{
+    cursor: pointer;
+}
+
+.radio_class tr td label input:checked + img{
+    outline: 3px solid rgb(81, 65, 231);
+}
